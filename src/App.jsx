@@ -8,12 +8,12 @@ import MyProfile from "./pages/MyProfile/MyProfile";
 import Author from "./pages/Author/Author";
 import SignUp from "./pages/Register/SignUp";
 import Create from "./pages/Create/Create";
-import Navbar from "./components/navbar/Navbar"
+/* import Navbar from "./components/navbar/Navbar" */
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+     {/*  <Navbar /> */}
       <Routes>
         <Route index="/login" element={<Login />}></Route>
         <Route path="/home" element={<Home />}></Route>

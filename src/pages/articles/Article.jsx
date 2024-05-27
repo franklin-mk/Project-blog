@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Article.css";
+import Navbar from "../../components/navbar/Navbar"
 
 function Article() {
   const { id } = useParams();
@@ -17,6 +18,8 @@ function Article() {
       .catch((err) => console.log(err));
   }, []);
   return (
+    <> 
+    <Navbar />
     <div className="detail-post-container">
       <div className="title-description">
         <h2>{post.title}</h2>
@@ -31,6 +34,7 @@ function Article() {
         <link />
       </button>
     </div>
+    </>
   );
 }
 

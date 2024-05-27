@@ -1,9 +1,12 @@
 import React from "react"
 import "./MyProfile.css"
 import { Link } from "react-router-dom";
+import Navbar from "../../components/navbar/Navbar"
 
 export default function MyProfile() {
     return (
+        <>
+        <Navbar />
         <div className="prof-container">
             <div className="profile-header">
                 <h1>MY PROFILE</h1>
@@ -35,6 +38,7 @@ export default function MyProfile() {
                 </div>
             </section>
         </div>
+        </>
     )
 
 }

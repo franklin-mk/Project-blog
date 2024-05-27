@@ -1,9 +1,12 @@
 import React from "react"
 import "./Author.css"
 import FollowButton from "./Follow-btn"
+import Navbar from "../../components/navbar/Navbar"
 
 export default function Author() {
     return (
+        <>
+        <Navbar />
         <div className="prof-container">
                 <div className="profile-header">
                     <h1>AUTHOR'S PROFILE</h1>
@@ -26,5 +29,6 @@ export default function Author() {
 
                 
             </div>
+            </>
     )
 } 

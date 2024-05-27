@@ -5,6 +5,7 @@ import Category from "./Category";
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../../firebase-config";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/navbar/Navbar"
 //
 
 export default function Create() {
@@ -34,9 +35,7 @@ export default function Create() {
 
   return (
     <>
-      {/* <header className="sticky">
-                <h1>CREATE POST</h1>
-            </header> */}
+      <Navbar />
       <div className="create">
               <img
                 className="createImg"

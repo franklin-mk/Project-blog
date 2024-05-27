@@ -4,6 +4,7 @@ import Post from "./Post";
 import { BiGridAlt } from "react-icons/bi";
 import "./Home.css";
 import { SiChatbot } from "react-icons/si";
+import Navbar from "../../components/navbar/Navbar";
 
 function Posts() {
   const [blogs, setBlogs] = useState([]);
@@ -26,29 +27,37 @@ function Posts() {
     );
   };
   return (
-    <div className="posts">
-      <div className="search-container">
-        <input
-          type="text"
-          placeholder="search"
-          onInput={getInputData}
-          className="search-input"
-        ></input>
+    <>
+      <Navbar />
+      <div className="posts">
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="search"
+            onInput={getInputData}
+            className="search-input"
+          ></input>
+        </div>
+        <div className="blog-icon">
+          <h3>Blogs</h3>
+          <BiGridAlt />
+        </div>
+        <div className="posts-container">
+          {blogs.map((blog, index) => (
+            <Post blog={blog} key={index} />
+          ))}
+        </div>
+        <div>
+          <button
+            onClick={() =>
+              window.open("https://starletshealthbot.streamlit.app/", "_blank")
+            }
+          >
+            <SiChatbot /> Open Chatbot
+          </button>
+        </div>
       </div>
-      <div className="blog-icon">
-        <h3>Blogs</h3>
-        <BiGridAlt />
-      </div>
-      <div className="posts-container">
-        {blogs.map((blog, index) => (
-          <Post blog={blog} key={index} />
-        ))}
-      </div>
-      <div>
-      <button onClick={() => window.open("https://starletshealthbot.streamlit.app/", "_blank")}>
-        <SiChatbot /> Open Chatbot
-      </button>
-    </div>    </div>
+    </>
   );
 }
 
