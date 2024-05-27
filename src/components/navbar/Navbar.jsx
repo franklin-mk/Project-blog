@@ -16,7 +16,7 @@ function Navbar() {
             <span className="navbarIconBadge"></span>
           </div>
           <p>
-            <span className="logo">My Health Assistant</span>
+            <span className="logo">lifestlye blog</span>
           </p>
         </div>
       </div>
