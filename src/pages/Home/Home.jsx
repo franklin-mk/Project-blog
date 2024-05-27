@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Post from "./Post";
 import { BiGridAlt } from "react-icons/bi";
 import "./Home.css";
+import { SiChatbot } from "react-icons/si";
 
 function Posts() {
   const [blogs, setBlogs] = useState([]);
@@ -43,6 +44,7 @@ function Posts() {
           <Post blog={blog} key={index} />
         ))}
       </div>
+      <div><button><SiChatbot /></button></div>
     </div>
   );
 }
