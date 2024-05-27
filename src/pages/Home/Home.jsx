@@ -44,7 +44,7 @@ function Posts() {
           <Post blog={blog} key={index} />
         ))}
       </div>
-      <div><button><SiChatbot /></button></div>
+      <div><a href="https://starletshealthbot.streamlit.app/"><button><SiChatbot /></button></a> </div>
     </div>
   );
 }
