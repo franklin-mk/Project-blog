@@ -44,8 +44,11 @@ function Posts() {
           <Post blog={blog} key={index} />
         ))}
       </div>
-      <div><a href="https://starletshealthbot.streamlit.app/" target="_blank"><button><SiChatbot /></button></a> </div>
-    </div>
+      <div>
+      <button onClick={() => window.open("https://starletshealthbot.streamlit.app/", "_blank")}>
+        <SiChatbot /> Open Chatbot
+      </button>
+    </div>    </div>
   );
 }
 
